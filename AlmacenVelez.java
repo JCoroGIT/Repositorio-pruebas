@@ -4,9 +4,9 @@ public class AlmacenVelez {
 
     public static void main(String[] args) {
         // Declaración e inicialización estática de 3 productos
-        Producto bocadilloj = new Producto("ID: 100010101110", "        Bocadillo de jamón", 1, 1.5);
-        Producto refresco = new Producto("ID: 101010100011", "      Refresco", 2, 1.05);
-        Producto cerveza = new Producto("ID: 100010101011", "       Cerveza", 3, 0.75);
+        Producto bocadilloj = new Producto("ID: 10001010", "        Bocadillo de jamón", 1, 1.5);
+        Producto refresco = new Producto("ID: 10101010", "      Refresco", 2, 1.05);
+        Producto cerveza = new Producto("ID: 10001010", "       Cerveza", 3, 0.75);
 
         // Captura de información del cliente
         Scanner scanner = new Scanner(System.in);
