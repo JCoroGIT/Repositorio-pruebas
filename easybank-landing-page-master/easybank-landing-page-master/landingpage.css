@@ -17,6 +17,10 @@
     --Font-size: 18px;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 .flex-header {
     display: flex;
     flex-direction: row;
@@ -30,8 +34,14 @@
     height: 5rem;
 }
 
-.flex-header svg{
+.logo-tittle{
     cursor: pointer;
+    color: var(--Dark-Blue);
+    font-size: 2em;
+}
+
+.logo-tittle b{
+    color: hsl(149, 38%, 46%);
 }
 
 .btn-logo{
@@ -95,7 +105,7 @@ main{
     grid-template-columns: repeat(2, 50%);
     width: 100%;
     height: auto;
-    background: var(--Very-Light-Gray);
+    background:var(--Very-Light-Gray) ;
 }
 
 .flex-presentation {
@@ -109,7 +119,7 @@ main{
     gap: 1.5em;
 }
 .tittle-presentacion {
-    font-weight: 400;
+    font-weight: 700;
     color: var(--Dark-Blue);
     font-size: 3rem;
 }
@@ -117,6 +127,7 @@ main{
     color: var(--Grayish-Blue);
     font-size: var(--Font-size);
     text-align: start;
+    line-height: 1.6em;
 }
 .btn-presentation {
     padding: 1em 2.5em;
@@ -133,15 +144,17 @@ main{
     justify-content: end;
     width: 100%;
     height: 100%;
-    background: url(images/bg-intro-desktop.svg) no-repeat;
-    background-position: left;
-    background-size: cover;
+    
 }
 
 .prototype img{
-    position: absolute;
-    height: 100%;
-    top: -10px;
+    position: relative;
+    border-radius: 1em;
+    margin: auto auto;
+    object-fit: cover;
+
+    height: 80%;
+    width: 90%;
 }
 
 .flex-options {
@@ -164,7 +177,7 @@ main{
 .info-tittle {
     font-size: 2.1rem;
     color: var(--Dark-Blue);
-    font-weight: 300;
+    font-weight: 500;
 }
 .p-info {
     color: var(--Grayish-Blue);
@@ -196,6 +209,54 @@ main{
     font-size: 17px;
 }
 
+.frase {
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    gap: 2em;
+    padding: 3em .5em;
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.grid-frase{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    gap: 2em;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+}
+
+.grid-frase img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1em;
+    box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.23);
+    -webkit-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.23);
+    transition: transform .2s ease;
+}
+
+.grid-frase img:hover{
+    transform: scale(1.05);
+}
+
+.frase-titulo {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--Dark-Blue);
+}
+.frase-autor {
+    color: var(--Dark-Blue);
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+
 .gallery {
     display: flex;
     padding:3em 6rem ;
@@ -208,7 +269,7 @@ main{
 .galery-tittle {
     font-size: 2.1rem;
     color: var(--Dark-Blue);
-    font-weight: 300;
+    font-weight: 500;
 }
 .grid-cards {
     display: grid;
@@ -247,13 +308,87 @@ main{
     padding: .5em 1em;
 }
 
-* strong:hover{
+.description a{
+    text-decoration: none;
+    color: var(--Dark-Blue);
+    font-weight: 700;
+}
+
+.description a:hover{
     color:var(--Bright-Cyan);
+    text-decoration: none;
 }
 
 .description :first-child{
     font-size: 14px;
     color: var(--Grayish-Blue);
+}
+
+.form{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+}
+
+.form-container {
+    max-width: 700px;
+    width: 100%;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: var(--Dark-Blue);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Estilos de los campos del formulario */
+.form-container input, .form-container textarea, .form-container button {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-container input:focus, .form-container textarea:focus {
+    outline: none;
+    border-color: var(--Dark-Blue);
+}
+
+.form-container textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Estilos del botón */
+.form-container button {
+    background-color: var(--Dark-Blue);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: var(--Lime-Green);
 }
 
 .grid-footer {
@@ -270,6 +405,10 @@ main{
     flex-direction: column;
     width: 100%;
     gap: 2.5rem;    
+}
+
+#footer-logo{text-align: start;
+    color: var(--White);
 }
 
 .icons{
@@ -440,6 +579,7 @@ main{
         width: 100%;
         text-align: center;
     }
+
 
     .grid-footer{
         display: flex;
